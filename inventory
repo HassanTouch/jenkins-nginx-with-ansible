@@ -1,0 +1,7 @@
+[webservers]
+controle ansible_host=18.222.106.90 ansible_user=ubuntu
+
+
+[jenkins]
+jenkins ansible_host=3.16.148.112 ansible_user=ec2-user
+

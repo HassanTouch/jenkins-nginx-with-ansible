@@ -1,0 +1,24 @@
+---
+# tasks file for role/iti-webserver
+- name: ensure nginx is at the latest version
+  apt: name=nginx state=latest
+
+- name: index.html copy
+  template: 
+    src: index.html
+    dest: /var/www/html    
+ # notify: Restart Nginx
+
+##################################################################
+- name: print inventory_hostname
+  ansible.builtin.debug:
+        var: inventory_hostname
+- name: print ansible_hostname
+  ansible.builtin.debug:
+        var: ansible_hostname
+- name: print ansible_fqdn
+  ansible.builtin.debug:
+        var: ansible_fqdn
+
+#################################################################
+

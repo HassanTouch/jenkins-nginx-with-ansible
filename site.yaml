@@ -1,0 +1,14 @@
+---
+- name: install nginx
+  hosts: webservers 
+  roles:
+    - role/nginx
+  
+  
+
+- name: install jenkins
+  hosts: jenkins
+  roles:
+    - jenkins
+  
+
